@@ -245,7 +245,7 @@ accountRouter.get("/", async (req, res) => {
           msg: "Your account is closed, to activate your account contact to you branch",
         });
       } else {
-        let transactions = await ReceiptModel.find({ ReceiptModel });
+        let transactions = await ReceiptModel.find({ accountId });
         res.send({ accountDetails: accountDetails, transactions: transactions });
       }
     } catch (error) {
